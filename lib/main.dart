@@ -20,10 +20,10 @@ void main() {
         //mainAxisAlignment: MainAxisAlignment.spaceAround, //space between widgets
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.network(url,height: 100,width: 200, fit: BoxFit.cover,),
-          Text('Car ', style: TextStyle(fontSize: 25),),
+          Image.network(url,height: 200,width: 400, fit: BoxFit.cover,),
+          Text('Car ', style: TextStyle(fontSize: 30),),
           //Text(description,style: TextStyle(fontSize: 14),)
-          Text(description2,style: TextStyle(fontSize: 14),)
+          Text(description2,style: TextStyle(fontSize: 25),)
         ],
       ),
     ),
