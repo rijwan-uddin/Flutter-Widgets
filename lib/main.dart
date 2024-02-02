@@ -30,7 +30,10 @@ void main() {
               Icon(Icons.favorite,color:Colors.red,size:25,),
             ],
           ), //these 3 icons is designed with row widget
-          Text('Car ', style: TextStyle(fontSize: 30),),
+          Padding(
+            padding: const EdgeInsets.only(top:12.0,bottom:12), //EdgeInsets.all or use top,buttom,left,horizontal,vertical
+            child: Text('Car ', style: TextStyle(fontSize: 30),),
+          ),
           //Text(description,style: TextStyle(fontSize: 14),)
           Text(description2,style: TextStyle(fontSize: 25),)
         ],
