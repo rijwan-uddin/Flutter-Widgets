@@ -14,13 +14,22 @@ void main() {
         title: Text("Cars"),
       ),
       body:  Column(
-        //crossAxisAlignment: CrossAxisAlignment.start,//widget will show from the start
-        crossAxisAlignment: CrossAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.start,//widget will show from the start
+       // crossAxisAlignment: CrossAxisAlignment.center,
 
         //mainAxisAlignment: MainAxisAlignment.spaceAround, //space between widgets
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Image.network(url,height: 200,width: 400, fit: BoxFit.cover,),
+          Image.network(url,height: 250,width: double.infinity, fit: BoxFit.cover,),
+          const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, //starts  horizontaly like share,fav icons
+            crossAxisAlignment: CrossAxisAlignment.end, //start vertically like navigation button
+            children: [
+              Icon(Icons.share,color: Colors.red,size: 28,),
+              Icon(Icons.navigation,color: Colors.red,size: 10,), //the size is small because want to understand the difference between crosaxis and main axis
+              Icon(Icons.favorite,color:Colors.red,size:25,),
+            ],
+          ), //these 3 icons is designed with row widget
           Text('Car ', style: TextStyle(fontSize: 30),),
           //Text(description,style: TextStyle(fontSize: 14),)
           Text(description2,style: TextStyle(fontSize: 25),)
